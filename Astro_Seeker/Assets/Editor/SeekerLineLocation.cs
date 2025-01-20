@@ -48,20 +48,20 @@ public class SeekerLineLocation : MonoBehaviour
             // 子オブジェクトがある場合、再帰的に処理
             for (int i = 0; i < gameObject.transform.childCount; ++i)
             {
-                WriteRecursivePosition(bw, gameObject.transform.GetChild(i).gameObject, offsetPos + gameObject.transform.GetChild(i).localPosition, false);
+                WriteRecursivePosition(bw, gameObject.transform.GetChild(i).gameObject, offsetPos + gameObject.transform.GetChild(i).localPosition);
             }
         }
         else // 子オブジェクトの場合
         {
             bw.Write(gameObject.name);
 
-            // ワールド座標を出力
+            // offsetPos(親オブジェクトのワールド座標)をローカル座標に足してワールド座標を出力
             WriteVector(bw, gameObject.transform.position);  // ここを修正
 
             // 子オブジェクトがある場合、再帰的に処理
             for (int i = 0; i < gameObject.transform.childCount; ++i)
             {
-                WriteRecursivePosition(bw, gameObject.transform.GetChild(i).gameObject, offsetPos + gameObject.transform.GetChild(i).localPosition);
+                WriteRecursivePosition(bw, gameObject.transform.GetChild(i).gameObject,gameObject.transform.GetChild(i).localPosition);
             }
         }
 

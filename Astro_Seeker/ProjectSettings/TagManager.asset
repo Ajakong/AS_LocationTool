@@ -14,6 +14,7 @@ TagManager:
   - Coin
   - StickStarItem
   - FullPowerDropItem
+  - Gorori
   layers:
   - Default
   - TransparentFX
