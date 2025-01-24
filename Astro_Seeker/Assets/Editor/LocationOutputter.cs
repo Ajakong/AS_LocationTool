@@ -9,6 +9,7 @@ public class LocationOutputter : MonoBehaviour
     [MenuItem("メニュー/data.loc出力")]
     public static void OutputLocationData()
     {
+
         string fileName = EditorUtility.SaveFilePanel("出力ファイル", "", "data", "loc");
         if (fileName == "")
         {

@@ -2,7 +2,7 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-public class SeekerLineLocation : MonoBehaviour
+public static class SeekerLineLocation
 {
     // メニュー項目を作成
     [MenuItem("メニュー/SeekerLineデータ出力")]
@@ -88,10 +88,12 @@ public class SeekerLineLocation : MonoBehaviour
     }
 
     // GameObjectの位置データをバイナリファイルに出力するメイン処理
-    private static bool WriteTransformData(BinaryWriter bw)
+    public static bool WriteTransformData(BinaryWriter bw,GameObject obj)
     {
+        Debug.Log("WriteTransformData called for: " + obj.name);
+
         // 現在選択中のオブジェクトを取得
-        GameObject topObject = Selection.activeGameObject;
+        GameObject topObject = obj;
         if (topObject == null)
         {
             EditorUtility.DisplayDialog("", "トップレベルオブジェクトを選択してください", "閉じる");
@@ -122,7 +124,7 @@ public class SeekerLineLocation : MonoBehaviour
             //binaryWriter.Write(obj.name); // オブジェクト名
 
             // トランスフォームデータの書き込み
-            if (!WriteTransformData(binaryWriter))
+            if (!WriteTransformData(binaryWriter,obj))
             {
                 EditorUtility.DisplayDialog("失敗しました", $"{fileName}出力に失敗しました", "閉じる");
                 return false;
