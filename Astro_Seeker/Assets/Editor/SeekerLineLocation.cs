@@ -68,7 +68,7 @@ public static class SeekerLineLocation
         return true;
     }
     // オブジェクトの数を計算するメソッド（トップオブジェクトを含まない）
-    private static int GetRecursiveObjectCount(GameObject gameObject,bool skipTopObject=false)
+    public static int GetRecursiveObjectCount(GameObject gameObject,bool skipTopObject=false)
     {
         int objectCount = 1;
 

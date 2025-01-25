@@ -9,7 +9,6 @@ public class LockedObjectsOutPutter : MonoBehaviour
     [MenuItem("メニュー/LockedObjects出力")]
     public static void OutputLocationData()
     {
-
         string fileName = EditorUtility.SaveFilePanel("出力ファイル", "", "LockedObject", "loc");
         if (fileName == "")
         {
@@ -31,8 +30,7 @@ public class LockedObjectsOutPutter : MonoBehaviour
 
     private static bool WriteLocationLockedObjectData(BinaryWriter bw, GameObject obj)
     {
-        Debug.Log("WriteLocationLockedObjectData called for: " + obj.name);
-
+        
         // 子オブジェクトを対象にデータを書き込み
         bw.Write(obj.name);
         bw.Write(obj.tag);
@@ -50,7 +48,10 @@ public class LockedObjectsOutPutter : MonoBehaviour
         }
         if (obj.tag == "SeekerLine")
         {
-            SeekerLineLocation.WriteRecursivePosition(bw, obj,Vector3.zero,true);
+            int num=SeekerLineLocation.GetRecursiveObjectCount(obj,true);
+            Debug.Log(num);
+            bw.Write(num);
+            SeekerLineLocation.WriteRecursivePosition(bw, obj, Vector3.zero, true);
         }
 
         return true;
@@ -63,15 +64,22 @@ public class LockedObjectsOutPutter : MonoBehaviour
 
         // 選択されているオブジェクトを取得
         GameObject[] selectedObjects = Selection.gameObjects;
-        int selectedObjectCount = selectedObjects.Length;
 
-        // 最初に選択されたオブジェクトの数を書き込む
-        binaryWriter.Write(selectedObjectCount);
+        // 子オブジェクトの総数をカウント
+        int childObjectCount = 0;
+        foreach (GameObject selectedObj in selectedObjects)
+        {
+            childObjectCount += selectedObj.transform.childCount;
+        }
+
+        // 最初に子オブジェクトの総数を書き込む
+        binaryWriter.Write(childObjectCount);
+
+        
 
         // 各選択されたオブジェクトの子オブジェクトのデータを書き込む
         foreach (GameObject selectedObj in selectedObjects)
         {
-            // 直接の子オブジェクトを全て取得
             foreach (Transform child in selectedObj.transform)
             {
                 if (!WriteLocationLockedObjectData(binaryWriter, child.gameObject))
