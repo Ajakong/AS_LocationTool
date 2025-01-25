@@ -35,7 +35,7 @@ public static class SeekerLineLocation
     }
 
     // すべての階層の子オブジェクトの位置を再帰的に出力するメソッド（ワールド座標）
-    private static bool WriteRecursivePosition(BinaryWriter bw, GameObject gameObject, Vector3 offsetPos, bool skipTopObject = false)
+    public static bool WriteRecursivePosition(BinaryWriter bw, GameObject gameObject, Vector3 offsetPos, bool skipTopObject = false)
     {
         if (gameObject == null || gameObject.transform == null)
         {

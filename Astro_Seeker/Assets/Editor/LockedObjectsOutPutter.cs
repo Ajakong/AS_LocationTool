@@ -50,7 +50,7 @@ public class LockedObjectsOutPutter : MonoBehaviour
         }
         if (obj.tag == "SeekerLine")
         {
-            SeekerLineLocation.WriteTransformData(bw, obj);
+            SeekerLineLocation.WriteRecursivePosition(bw, obj,Vector3.zero,true);
         }
 
         return true;
