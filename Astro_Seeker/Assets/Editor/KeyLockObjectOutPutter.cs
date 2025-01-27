@@ -51,13 +51,22 @@ public class KeyLockObjectOutPutter : MonoBehaviour
         KeyLockObject[] keyLockObjects = FindObjectsOfType<KeyLockObject>();
         int planetCount = keyLockObjects.Length;
 
-        // 最初にオブジェクトの数を書き込む
-        binaryWriter.Write(planetCount);
+        // 選択されているオブジェクトを取得
+        GameObject[] selectedObjects = Selection.gameObjects;
 
+        // 子オブジェクトの総数をカウント
+        int childObjectCount = 0;
+        foreach (GameObject selectedObj in selectedObjects)
+        {
+            childObjectCount += selectedObj.transform.childCount;
+        }
+        // 最初にオブジェクトの数を書き込む
+        binaryWriter.Write(childObjectCount);
+        Debug.Log(childObjectCount);
         // それぞれのPlanetデータを書き込む
         foreach (KeyLockObject obj in keyLockObjects)
         {
-
+            Debug.Log("ロケーション出力");
             if (!WriteLocationLockedObjectData(binaryWriter, obj, obj.gameObject))
             {
                 EditorUtility.DisplayDialog("失敗しました", "データの書き込みに失敗しました", "閉じる");

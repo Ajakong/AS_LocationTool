@@ -75,6 +75,7 @@ public class LockedObjectsOutPutter : MonoBehaviour
         // 最初に子オブジェクトの総数を書き込む
         binaryWriter.Write(childObjectCount);
 
+        Debug.Log(childObjectCount);
         
 
         // 各選択されたオブジェクトの子オブジェクトのデータを書き込む
