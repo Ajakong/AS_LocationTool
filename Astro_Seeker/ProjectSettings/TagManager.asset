@@ -17,6 +17,12 @@ TagManager:
   - Gorori
   - BigKuribo
   - SeekerLine
+  - TalkObject
+  - DekaHead_Red
+  - DekaHead_Blue
+  - DekaHead_Green
+  - DekaHead_Yellow
+  - DekaHead_White
   layers:
   - Default
   - TransparentFX
