@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class TalkObjectLocation : MonoBehaviour
 {
-    [MenuItem("メニュー/LockedObjects出力")]
+    [MenuItem("メニュー/TalkObjects出力")]
     public static void OutputLocationData()
     {
         string fileName = EditorUtility.SaveFilePanel("出力ファイル", "", "TalkObject", "loc");
@@ -46,6 +46,10 @@ public class TalkObjectLocation : MonoBehaviour
         FileStream fs = File.Create(fileName);
         BinaryWriter binaryWriter = new BinaryWriter(fs);
 
+        // Planetオブジェクトをシーンから取得
+        TalkObject[] talkObjects = FindObjectsOfType<TalkObject>();
+        int talkObjectCount = talkObjects.Length;
+
         // 選択されているオブジェクトを取得
         GameObject[] selectedObjects = Selection.gameObjects;
 
@@ -55,27 +59,17 @@ public class TalkObjectLocation : MonoBehaviour
         {
             childObjectCount += selectedObj.transform.childCount;
         }
-
-        // 最初に子オブジェクトの総数を書き込む
+        // 最初にオブジェクトの数を書き込む
         binaryWriter.Write(childObjectCount);
-
-       
-        
-
-        // 各選択されたオブジェクトの子オブジェクトのデータを書き込む
-        foreach (GameObject selectedObj in selectedObjects)
+        Debug.Log(childObjectCount);
+        // それぞれのPlanetデータを書き込む
+        foreach (TalkObject obj in talkObjects)
         {
-            foreach (Transform child in selectedObj.transform)
+            Debug.Log("ロケーション出力");
+            if (!WriteLocationLockedObjectData(binaryWriter, obj.gameObject, obj))
             {
-                foreach (TalkObject obj in child)
-                {
-                    Debug.Log("ロケーション出力");
-                    if (!WriteLocationLockedObjectData(binaryWriter, child.gameObject, obj))
-                    {
-                        EditorUtility.DisplayDialog("失敗しました", "データの書き込みに失敗しました", "閉じる");
-                        return false;
-                    }
-                }
+                EditorUtility.DisplayDialog("失敗しました", "データの書き込みに失敗しました", "閉じる");
+                return false;
             }
         }
 
