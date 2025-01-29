@@ -35,9 +35,6 @@ public class TalkObjectLocation : MonoBehaviour
         bw.Write(obj.name);
         bw.Write(obj.tag);
         WriteVector(bw, obj.transform.position);
-        bw.Write(to.locationData.modelName);
-        bw.Write(to.locationData.graphName);
-
         return true;
     }
 
