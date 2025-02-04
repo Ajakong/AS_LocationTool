@@ -23,6 +23,7 @@ TagManager:
   - DekaHead_Green
   - DekaHead_Yellow
   - DekaHead_White
+  - StarShard
   layers:
   - Default
   - TransparentFX

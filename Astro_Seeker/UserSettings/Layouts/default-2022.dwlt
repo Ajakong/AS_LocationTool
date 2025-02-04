@@ -332,14 +332,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: "C:\\Users\\20050\\OneDrive\\\u30C7\u30B9\u30AF\u30C8\u30C3\u30D7\\MyFolder\\github\\AS_LocationTool\\Astro_Seeker"
+  m_LastProjectPath: C:\Users\fko2347092\Desktop\Takasaki\git\AS_LocationTool\Astro_Seeker
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 805e0000
-    m_LastClickedID: 24192
-    m_ExpandedIDs: 00000000805e000000ca9a3bffffff7f
+    m_SelectedIDs: 685e0000
+    m_LastClickedID: 24168
+    m_ExpandedIDs: 00000000685e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -367,7 +367,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000805e0000
+    m_ExpandedIDs: 00000000685e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -394,7 +394,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000d65a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -459,24 +459,24 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 650}
-      m_SelectedIDs: 405b0000
-      m_LastClickedID: 23360
-      m_ExpandedIDs: 30fbffff86590000b2590000ca590000fc5900002a5a0000a05a0000bc5a0000ca5a00000c5b00001a5b0000285b00006a5b00004c5c00009c5c0000aa5c0000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 24fbffff
+      m_LastClickedID: -1244
+      m_ExpandedIDs: 24fbffff88590000b6590000c4590000f6590000225a00002e5a0000b05a0000ce5a0000dc5a0000285b0000365b0000445b0000765b0000785c0000885c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: KeyLockObjects
-        m_OriginalName: KeyLockObjects
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 22986
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -525,7 +525,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: -166, y: -26}
-      snapOffsetDelta: {x: -5, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -842,9 +842,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 180.15, y: -263, z: 521.85}
+    m_Target: {x: 66.48575, y: 73.72046, z: 633.6242}
     speed: 2
-    m_Value: {x: 180.15, y: -263, z: 521.85}
+    m_Value: {x: 66.48575, y: 73.72046, z: 633.6242}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -890,13 +890,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.24830942, y: 0.17665188, z: -0.04609158, w: -0.95133}
+    m_Target: {x: -0.2756128, y: -0.29902074, z: 0.090515226, w: -0.9091296}
     speed: 2
-    m_Value: {x: -0.24823794, y: 0.17807719, z: -0.046463605, w: -0.95105606}
+    m_Value: {x: -0.2768276, y: -0.30023453, z: 0.091375194, w: -0.9082271}
   m_Size:
-    m_Target: 1219.4576
+    m_Target: 1207.7853
     speed: 2
-    m_Value: 1166.9451
+    m_Value: 1209.8838
   m_Ortho:
     m_Target: 0
     speed: 2
