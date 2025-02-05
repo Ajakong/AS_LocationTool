@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 111
+  controlID: 47
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 58
+  controlID: 48
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -270,8 +270,8 @@ MonoBehaviour:
     y: 0
     width: 484
     height: 939
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -332,14 +332,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: "C:\\Users\\20050\\OneDrive\\\u30C7\u30B9\u30AF\u30C8\u30C3\u30D7\\MyFolder\\github\\AS_LocationTool\\Astro_Seeker"
+  m_LastProjectPath: C:\Users\fko2347092\Desktop\Takasaki\git\AS_LocationTool\Astro_Seeker
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9c5e0000
-    m_LastClickedID: 24220
-    m_ExpandedIDs: 000000009c5e000000ca9a3bffffff7f
+    m_SelectedIDs: 94630000
+    m_LastClickedID: 25492
+    m_ExpandedIDs: 000000009463000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -367,7 +367,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009c5e0000
+    m_ExpandedIDs: 0000000094630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -459,10 +459,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 266}
-      m_SelectedIDs: bc5c0000
-      m_LastClickedID: 23740
-      m_ExpandedIDs: 6af9ffff1afbffff94590000c2590000025a00003c5a0000b45a0000d05a0000de5a0000205b0000465b0000825b0000bc5c0000
+      scrollPos: {x: 0, y: 106}
+      m_SelectedIDs: a8610000
+      m_LastClickedID: 25000
+      m_ExpandedIDs: a0eeffffaa5d0000d85d0000245e0000565e0000345f0000525f0000625f0000bc5f0000e45f000040600000a8610000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -525,7 +525,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: -166, y: -26}
-      snapOffsetDelta: {x: -5, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -842,7 +842,7 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 137.15967, y: -382.28662, z: 427.42676}
+    m_Target: {x: 66.48575, y: 73.72046, z: 633.6242}
     speed: 2
     m_Value: {x: 137.15967, y: -382.28662, z: 427.42676}
   m_RenderMode: 0
@@ -890,13 +890,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.020459987, y: -0.9626666, z: 0.25899372, w: -0.07610675}
+    m_Target: {x: -0.2756128, y: -0.29902074, z: 0.090515226, w: -0.9091296}
     speed: 2
-    m_Value: {x: -0.02057396, y: -0.96226954, z: 0.2604354, w: -0.07607539}
+    m_Value: {x: 0.020459987, y: 0.9626666, z: -0.25899372, w: 0.07610675}
   m_Size:
-    m_Target: 843.71094
+    m_Target: 1207.7853
     speed: 2
-    m_Value: 883.4669
+    m_Value: 843.71094
   m_Ortho:
     m_Target: 0
     speed: 2
