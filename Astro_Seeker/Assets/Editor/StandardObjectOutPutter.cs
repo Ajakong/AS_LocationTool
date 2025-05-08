@@ -45,6 +45,21 @@ public class StandardObjectOutPutter : MonoBehaviour
             bw.Write(gameObject.tag);//先頭1バイトが文字列数、あとは文字列データ
 
             WriteVector(bw, offsetPos + gameObject.transform.localPosition);//座標
+
+            if(gameObject.tag=="Takobo")
+            {
+                Takobo takobo = gameObject.GetComponent<Takobo>();
+                Takobo.TakoboProperty property = takobo.GetLocationData();
+                bw.Write(property.hp);
+            }
+            if(gameObject.tag=="Kuribo")
+            {
+                Kuribo kuribo = gameObject.GetComponent<Kuribo>();
+                Kuribo.KuriboProperty property = kuribo.GetLocationData();
+                bw.Write(property.hp);
+                bw.Write(property.speed);
+            }
+
         }
         else
         {
